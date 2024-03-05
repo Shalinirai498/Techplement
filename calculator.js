@@ -55,6 +55,11 @@ function showHistory() {
     }
     historyBlock.style.display = 'block'; // Show history block
 }
+function clearHistory() {
+  localStorage.setItem('calculatorHistory', JSON.stringify([])); // Clear history from localStorage
+  var historyBlock = document.getElementById('historyBlock');
+  historyBlock.innerHTML = ''; // Clear history block
+}
 
 
 

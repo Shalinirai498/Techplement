@@ -74,5 +74,9 @@ body {
 #historyBlock li {
     margin-bottom: 5px;
 }
+.calculator input[type="button"].clearhistory {
+  width:88%;
+  background-color:#32c267;
+}
   
   
