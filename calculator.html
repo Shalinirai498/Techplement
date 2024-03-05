@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Calculator</title>
+  <link rel="stylesheet" type="text/css" href="calculator.css">
+</head>
+<body>
+  <div class="calculator">
+      <input type="text" id="display" name="expression" placeholder="Enter expression" required onkeypress="if(event.keyCode==13 || event.which==13) calculate()">
+      <br>
+      <input type="text" id="result" name="result" placeholder="Display result" readonly>
+      <br>
+    <input type="button" value="C" onclick="clearDisplay()">
+    <input type="button" value="DEL" onclick="deleteLast()">
+    <input type="button" value="=" class="equals" onclick="calculate()">
+    <input type="button" value="+" class="operator" onclick="addToDisplay('+')">
+    <br>
+    <input type="button" value="1" onclick="addToDisplay('1')">
+    <input type="button" value="2" onclick="addToDisplay('2')">
+    <input type="button" value="3" onclick="addToDisplay('3')">
+    <input type="button" value="-" class="operator" onclick="addToDisplay('-')">
+    <br>
+    <input type="button" value="4" onclick="addToDisplay('4')">
+    <input type="button" value="5" onclick="addToDisplay('5')">
+    <input type="button" value="6" onclick="addToDisplay('6')">
+    <input type="button" value="*" class="operator" onclick="addToDisplay('*')">
+    <br>
+    <input type="button" value="7" onclick="addToDisplay('7')">
+    <input type="button" value="8" onclick="addToDisplay('8')">
+    <input type="button" value="9" onclick="addToDisplay('9')">
+    <input type="button" value="/" class="operator" onclick="addToDisplay('/')">
+    <br>
+    <input type="button" value="0" onclick="addToDisplay('0')">
+    <input type="button" value="History" class="history" onclick="showHistory()">
+    <div id="historyBlock" style="display: none;"></div> 
+  </div>
+  <script src="calculator.js"></script>
+</body>
+</html>
